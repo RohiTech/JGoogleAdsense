@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        
+    <title>What is the most efficient way to concatenate files of different compression types in a bash script? - Stack Overflow</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    
+    <script src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/adzerk1_2_4_43adzerk2_2_17_45adzerk3_2_4_44.js" async="" type="text/javascript"></script><script src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/ga.js" async="" type="text/javascript"></script><script src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/quant.html" async="" type="text/javascript"></script><script type="text/javascript" src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/jquery.js"></script>
+    <script type="text/javascript" src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/stub.js"></script>
+    <link rel="stylesheet" type="text/css" href="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/all.css">
+    
+    <meta name="relativepagescore" content="11107">
+    <link rel="canonical" href="http://stackoverflow.com/questions/15304435/what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ">
+    <link rel="alternate" type="application/atom+xml" title="Feed for question 'What is the most efficient way to concatenate files of different compression types in a bash script?'" href="http://stackoverflow.com/feeds/question/15304435">
+    <script type="text/javascript">
+        
+        StackExchange.ready(function () {
+            StackExchange.using("postValidation", function () {
+                StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+            });
+
+            
+            StackExchange.question.init({showAnswerHelp:true,totalCommentCount:2,shownCommentCount:2,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:15304435});
+
+            styleCode();
+
+                StackExchange.realtime.subscribeToQuestion('1', '15304435');
+            
+                
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        StackExchange.init({"stackAuthUrl":"https://stackauth.com","serverTime":1363010559,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","enableSocialMediaInSharePopup":true,"useNewImageUploader":true},"user":{"fkey":"f7649f81c5085986f85551a6b4e1ac44","isAnonymous":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.js":"c862bf93b3ec","js/moderator.js":"81010b001b1a","js/full-anon.js":"f2e5223c76a0","js/full.js":"6c690b307479","js/wmd.js":"440e70aef0df","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/mobile.js":"6eb68240242f","js/help.js":"fc9fb0517db2","js/tageditor.js":"450c9e8426fc","js/tageditornew.js":"b6c68ad4c7dd","js/inline-tag-editing.js":"8e84e8a137f7","js/revisions.js":"7273bb714bba","js/review.js":"51a50e83c754","js/tagsuggestions.js":"aa48ef6154df","js/post-validation.js":"c7212bad9b79"});
+        
+    </script>
+
+
+    <script type="text/javascript">
+        StackExchange.using(
+            "gps",
+            function () {
+                StackExchange.gps.init(false);
+            }
+        );
+    </script>
+
+<script src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/full-anon.js" type="text/javascript" async=""></script><script src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/post-validation.js" type="text/javascript" async=""></script><script src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/prettify-full.js" type="text/javascript" async=""></script><script src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/adFeedback.js" type="text/javascript"></script><link href="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/adFeedback.css" rel="stylesheet"><link rel="stylesheet" type="text/css" href="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/sidebar.css"></head>
+<body class="question-page">
+    <noscript><div id="noscript-padding"></div></noscript>
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+
+    <div class="container">
+        <div id="header">
+            <div id="portalLink">
+                <a class="genu" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
+            </div>
+            <div id="topbar">
+                <div id="hlinks">
+                    
+
+
+
+
+
+
+
+
+
+<span id="hlinks-user">
+
+</span>
+<span id="hlinks-nav">
+                   <a href="http://stackoverflow.com/users/login?returnurl=%2fquestions%2f15304435%2fwhat-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ">log in</a>
+
+ <span class="lsep">|</span>
+                    <a href="http://careers.stackoverflow.com/">careers 2.0</a>
+
+ <span class="lsep">|</span>
+
+</span>
+<span id="hlinks-custom">
+        <a href="http://chat.stackoverflow.com/">chat</a>
+
+ <span class="lsep">|</span>
+            <a href="http://meta.stackoverflow.com/">meta</a>
+
+ <span class="lsep">|</span>
+        <a href="http://stackoverflow.com/about">about</a>
+
+ <span class="lsep">|</span>
+    <a href="http://stackoverflow.com/faq">faq</a>
+
+</span>
+                </div>
+                <div id="hsearch">
+                    <form id="search" action="/search" method="get" autocomplete="off">
+                    <div>
+                        <input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" maxlength="240" size="28" type="text">
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">Stack Overflow</a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://stackoverflow.com/questions">Questions</a></li>
+                        <li><a id="nav-tags" href="http://stackoverflow.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://stackoverflow.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://stackoverflow.com/badges">Badges</a></li>
+                        <li><a id="nav-unanswered" href="http://stackoverflow.com/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+        <div id="content">
+            
+
+<div itemscope="" itemtype="http://schema.org/Article">
+<link itemprop="image" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+<div id="question-header">
+    <h1 itemprop="name"><a href="http://stackoverflow.com/questions/15304435/what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ" class="question-hyperlink">What is the most efficient way to concatenate files of different compression types in a bash script?</a></h1>
+</div>
+<div id="mainbar">
+
+
+
+<div class="question" data-questionid="15304435" id="question">
+    
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1"><a href="http://engine.adzerk.net/r?e=eyJ0cyI6MTM2MzAxMDUzNzc4MywiYXYiOjQxNCwiYXQiOjQsImNtIjo4NDcsImNoIjoxMTc4LCJjciI6NTkyMCwiZG0iOjEsImZjIjo4ODA2LCJmbCI6MjQ0NCwia3ciOiJiYXNoLHNjcmlwdCxjYXQsYnVpbHQtaW4iLCJudyI6MjIsInJ2IjowLCJwciI6MTU2OCwic3QiOjgyNzcsInpuIjo0MywiZGkiOiIxOWVkMGVkNjBjYzI0YWU4OTViOGJkZTUyNDYzZGRkNCIsInVyIjoiaHR0cDovL2NhcmVlcnMuc3RhY2tvdmVyZmxvdy5jb20vIn0&amp;s=95SixYfaWBGMMnMy3ntovAbY0Xk" rel="nofollow" target="_blank" title=""><img src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/60abb4b317034aa2af0bc697e6f02963.png" title="" alt="" height="90" border="0" width="728"></a><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input value="12" name="downvoteReason" type="radio">Uninteresting</label></li><li><label><input value="13" name="downvoteReason" type="radio">Misleading</label></li><li><label><input value="14" name="downvoteReason" type="radio">Offensive</label></li><li><label><input value="15" name="downvoteReason" type="radio">Repetitive</label></li></ul><a href="#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/i_002.gif" height="0px" width="0px"></div>
+
+
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input value="15304435" type="hidden">
+    <a class="vote-up-off" title="This question shows research effort; it is useful and clear (click again to undo)">up vote</a>
+    <span class="vote-count-post ">1</span>
+    <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful (click again to undo)">down vote</a>
+    
+    <a class="star-off" href="#" title="This is a favorite question (click again to undo)">favorite</a>
+    <div class="favoritecount"><b></b></div>   
+
+ 
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="description">
+        <p>I have come across this need several times now and I am 
+surprised how hard it has been for me to find a "best" method for 
+concatenating files of different compression types.</p>
+
+<p>For instance, I have a directory with files <code>content1</code>, <code>content2.bz2</code>, and <code>content3.gz</code>.
+ If I want to perform the same operation on all the files I have to 
+first check what compression they are to decompress them correctly, 
+decompress it, then perform my operation.</p>
+
+<p>I have since written a script to handle the concatenation in a "smart" way. </p>
+
+<pre style="" class="lang-bsh prettyprint prettyprinted"><code><span class="com">#! /bin/bash</span><span class="pln">
+</span><span class="com"># Smart Cat</span><span class="pln">
+</span><span class="com"># usage smcat &lt;file|file*&gt;</span><span class="pln">
+
+</span><span class="kwd">for</span><span class="pln"> file </span><span class="kwd">in</span><span class="pln"> $@</span><span class="pun">;</span><span class="pln"> </span><span class="kwd">do</span><span class="pln">
+    end</span><span class="pun">=</span><span class="pln">$</span><span class="pun">{</span><span class="pln">file</span><span class="com">##*.}</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">[[</span><span class="pln"> $end </span><span class="pun">==</span><span class="pln"> </span><span class="str">'bz2'</span><span class="pln"> </span><span class="pun">]]</span><span class="pln"> </span><span class="pun">;</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+        bzcat $file
+    </span><span class="kwd">elif</span><span class="pln"> </span><span class="pun">[[</span><span class="pln"> $end </span><span class="pun">==</span><span class="pln"> </span><span class="str">'gz'</span><span class="pln"> </span><span class="pun">]]</span><span class="pln"> </span><span class="pun">;</span><span class="pln"> </span><span class="kwd">then</span><span class="pln">
+        gzcat $file
+    </span><span class="kwd">else</span><span class="pln">
+        cat $file
+    </span><span class="kwd">fi</span><span class="pln">
+</span><span class="kwd">done</span></code></pre>
+
+<p>It just seems silly there isn't a built in way to handle all the 
+different compression types. Or is there, and I have yet to find it? 
+Thanks for the help everyone!</p>
+
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/bash" class="post-tag" title="show questions tagged 'bash'" rel="tag">bash</a> <a href="http://stackoverflow.com/questions/tagged/script" class="post-tag" title="show questions tagged 'script'" rel="tag">script</a> <a href="http://stackoverflow.com/questions/tagged/cat" class="post-tag" title="show questions tagged 'cat'" rel="tag">cat</a> <a href="http://stackoverflow.com/questions/tagged/built-in" class="post-tag" title="show questions tagged 'built-in'" rel="tag">built-in</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/q/15304435" title="short permalink to this question" class="short-link" id="link-post-15304435">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/15304435/edit" class="suggest-edit-post" title="">improve this question</a></div>            </td>
+    <td class="post-signature" align="right">
+
+
+    <div class="user-info ">
+        <div class="user-action-time">
+                            edited
+                             <a href="http://stackoverflow.com/posts/15304435/revisions" title="show all edits to this post"><span title="2013-03-08 22:55:04Z" class="relativetime">2 days ago</span></a>
+
+        </div>
+        <div class="user-gravatar32">
+            
+        </div>
+        <div class="user-details">
+            <br>
+            
+        </div>
+    </div>
+    </td>
+    <td class="post-signature owner">
+        
+
+    <div class="user-info ">
+        <div class="user-action-time">
+                                    asked
+ <span title="2013-03-08 22:30:01Z" class="relativetime">2 days ago</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/2062164/tannermares"><div class=""><img src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/24cebcb9ca87f373b39d9fc3090ebe41.jpeg" alt="" height="32" width="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/2062164/tannermares">tannermares</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">51</span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-15304435" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-21603039" class="comment">
+        <td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span title="number of 'useful comment' votes received" class="cool">1</span>
+</td>
+<td>
+&nbsp;
+</td></tr>
+</tbody></table></td>
+        <td class="comment-text"><div><span class="comment-copy">You might also want to see if <a href="http://wakaba.c3.cx/s/apps/unarchiver.html" rel="nofollow">wakaba.c3.cx/s/apps/unarchiver.html</a> handles all the formats you want. It's available on my Ubuntu system as the <code>unar</code> package.</span> –&nbsp;<a href="http://stackoverflow.com/users/1301972/codegnome" title="11512 reputation" class="comment-user">CodeGnome</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(21603039, 0)" href="#comment21603039_15304435"><span title="2013-03-08 23:36:49Z" class="relativetime-clean">2 days ago</span></a></span></div></td>
+    </tr>
+            
+    <tr id="comment-21603128" class="comment">
+        <td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span title="number of 'useful comment' votes received" class="cool">1</span>
+</td>
+<td>
+&nbsp;
+</td></tr>
+</tbody></table></td>
+        <td class="comment-text"><div><span class="comment-copy">Fun fact: People have tried creating the One True Decompressor. Gzip handled the different formats at the time; <code>gzip</code>, <code>compress</code> and <code>pack</code>.
+ Such efforts hardly ever work on Unix though, and apart from more and 
+less serious efforts like your script, the only convention that stuck 
+was using no arguments for compression and <code>-d</code> for decompression, thus allowing compressors to be used interchangeably (like for <code>tar -I</code>).</span> –&nbsp;<a href="http://stackoverflow.com/users/1899640/that-other-guy" title="4055 reputation" class="comment-user">that other guy</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(21603128, 0)" href="#comment21603128_15304435"><span title="2013-03-08 23:42:55Z" class="relativetime-clean">2 days ago</span></a></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+</td>
+</tr>            </tbody></table>    
+</div>
+
+
+    
+
+
+<div id="answers">
+
+    <a name="tab-top"></a>
+    <div id="answers-header">
+        <div class="subheader answers-subheader">
+            <h2>
+                    2 Answers
+            </h2>
+            <div id="tabs">
+                <a href="http://stackoverflow.com/questions/15304435/what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ?answertab=active#tab-top" title="Answers with the latest activity first">active</a>
+<a href="http://stackoverflow.com/questions/15304435/what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ?answertab=oldest#tab-top" title="Answers in the order they were provided">oldest</a>
+<a class="youarehere" href="http://stackoverflow.com/questions/15304435/what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ?answertab=votes#tab-top" title="Answers with the highest score first">votes</a>
+
+            </div>
+        </div>    
+    </div>    
+
+
+
+
+  
+<a name="15304575"></a>
+<div id="answer-15304575" class="answer" data-answerid="15304575">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input value="15304575" type="hidden">
+    <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+    <span class="vote-count-post ">1</span>
+    <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+    
+
+ 
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text"><p>Probably there is not a single built in 
+way to handle different compression type. If you don't want to rely on 
+file extension to determine the compression type, you could use <code>file</code> command, e.g.</p>
+
+<pre style="" class="lang-bsh prettyprint prettyprinted"><code><span class="pln">file test</span><span class="pun">.</span><span class="pln">bz2   
+test</span><span class="pun">.</span><span class="pln">bz2</span><span class="pun">:</span><span class="pln"> bzip2 compressed data</span><span class="pun">,</span><span class="pln"> block size </span><span class="pun">=</span><span class="pln"> </span><span class="lit">900k</span></code></pre>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/15304575" title="short permalink to this answer" class="short-link" id="link-post-15304575">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/15304575/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    
+
+    <div class="user-info ">
+        <div class="user-action-time">
+                                    answered
+ <span title="2013-03-08 22:41:43Z" class="relativetime">2 days ago</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/716395/zzk"><div class="gravatar-wrapper-32"><img src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/WaPmW.jpeg" alt=""></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/716395/zzk">zzk</a><br>
+            <span class="reputation-score" title="reputation score" dir="ltr">784</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-15304575" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-21602947" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">@CodeGnome mentioned the same idea! Thanks!</span> –&nbsp;<a href="http://stackoverflow.com/users/2062164/tannermares" title="51 reputation" class="comment-user owner">tannermares</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(21602947, 15304575)" href="#comment21602947_15304575"><span title="2013-03-08 23:31:41Z" class="relativetime-clean">2 days ago</span></a></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+</td>
+</tr>
+   
+    
+    </tbody></table>
+</div>
+        <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk3"><a href="http://engine.adzerk.net/r?e=eyJ0cyI6MTM2MzAxMDUzNzc4NSwiYXYiOjQxNCwiYXQiOjQsImNtIjo4NDcsImNoIjoxMTc4LCJjciI6NTkxOSwiZG0iOjEsImZjIjo4ODA1LCJmbCI6MjQ0NCwia3ciOiJiYXNoLHNjcmlwdCxjYXQsYnVpbHQtaW4iLCJudyI6MjIsInJ2IjowLCJwciI6MTU2OCwic3QiOjgyNzcsInpuIjo0NCwiZGkiOiJiMTc1ZWY0NzBhYzE0NGYxODU4ZTQzNGU0ZmZjNWE4NCIsInVyIjoiaHR0cDovL2NhcmVlcnMuc3RhY2tvdmVyZmxvdy5jb20vIn0&amp;s=dssh25eoCfIQfXJzAqhyOHK5ZRc" rel="nofollow" target="_blank" title=""><img src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/4c4f1be011a447efbce49c1811022e7a.png" title="" alt="" height="90" border="0" width="728"></a><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input value="12" name="downvoteReason" type="radio">Uninteresting</label></li><li><label><input value="13" name="downvoteReason" type="radio">Misleading</label></li><li><label><input value="14" name="downvoteReason" type="radio">Offensive</label></li><li><label><input value="15" name="downvoteReason" type="radio">Repetitive</label></li></ul><a href="#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/i_003.gif" height="0px" width="0px"></div>
+
+
+
+  
+<a name="15304671"></a>
+<div id="answer-15304671" class="answer" data-answerid="15304671">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input value="15304671" type="hidden">
+    <a class="vote-up-off" title="This answer is useful (click again to undo)">up vote</a>
+    <span class="vote-count-post ">1</span>
+    <a class="vote-down-off" title="This answer is not useful (click again to undo)">down vote</a>
+    
+
+ 
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text"><h2>Use GNU Tar's Auto-Compress Flag</h2>
+
+<p>If you're mostly dealing with tarballs, you can solve part of your problem with GNU tar's auto-compress flag, which says:</p>
+
+<pre style="" class="lang-bsh prettyprint prettyprinted"><code><span class="pln"> </span><span class="pun">-</span><span class="pln">a</span><span class="pun">,</span><span class="pln"> </span><span class="pun">--</span><span class="pln">auto</span><span class="pun">-</span><span class="pln">compress
+       use archive suffix to determine the compression program</span></code></pre>
+
+<p>This handles bz2 and gz extensions, but may fail you for more exotic things. For example:</p>
+
+<pre style="" class="lang-bsh prettyprint prettyprinted"><code><span class="pln">tar xvfz </span><span class="str">"$filename"</span></code></pre>
+
+<p>will work on <em>somefile.tar.gz</em> and <em>somefile.tar.bz2</em> with equal facility.</p>
+
+<h2>Use <code>/usr/bin/file</code> for Identification</h2>
+
+<p>The file utility will generally give you the correct file type with a little help from grep or a glob pattern. For example:</p>
+
+<pre style="" class="lang-bsh prettyprint prettyprinted"><code><span class="pln">$ file foo</span><span class="pun">*</span><span class="pln">
+foo</span><span class="pun">:</span><span class="pln">     ASCII text
+foo</span><span class="pun">.</span><span class="pln">bz2</span><span class="pun">:</span><span class="pln"> bzip2 compressed data</span><span class="pun">,</span><span class="pln"> block size </span><span class="pun">=</span><span class="pln"> </span><span class="lit">900k</span><span class="pln">
+foo</span><span class="pun">.</span><span class="pln">gz</span><span class="pun">:</span><span class="pln">  gzip compressed data</span><span class="pun">,</span><span class="pln"> was </span><span class="str">"bar"</span><span class="pun">,</span><span class="pln"> from </span><span class="typ">Unix</span><span class="pun">,</span><span class="pln"> last modified</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Fri</span><span class="pln"> </span><span class="typ">Mar</span><span class="pln">  </span><span class="lit">8</span><span class="pln"> </span><span class="lit">17</span><span class="pun">:</span><span class="lit">33</span><span class="pun">:</span><span class="lit">48</span><span class="pln"> </span><span class="lit">2013</span></code></pre>
+
+<p>You could use a case statement to make short work of these files, 
+either iterating over a file glob or over positional arguments with <code>"$@"</code>. Either way, this example should help: </p>
+
+<pre style="" class="lang-bsh prettyprint prettyprinted"><code><span class="kwd">for</span><span class="pln"> file </span><span class="kwd">in</span><span class="pln"> foo</span><span class="pun">*;</span><span class="pln"> </span><span class="kwd">do</span><span class="pln">
+    </span><span class="kwd">case</span><span class="pln"> </span><span class="str">`file "$file"`</span><span class="pln"> </span><span class="kwd">in</span><span class="pln">
+        </span><span class="pun">*</span><span class="pln">ASCII</span><span class="pun">*)</span><span class="pln"> cat   </span><span class="str">"$file"</span><span class="pln"> </span><span class="pun">;;</span><span class="pln">
+         </span><span class="pun">*</span><span class="pln">gzip</span><span class="pun">*)</span><span class="pln"> zcat  </span><span class="str">"$file"</span><span class="pln"> </span><span class="pun">;;</span><span class="pln">
+          </span><span class="pun">*</span><span class="pln">bz2</span><span class="pun">*)</span><span class="pln"> bzcat </span><span class="str">"$file"</span><span class="pln"> </span><span class="pun">;;</span><span class="pln">
+    </span><span class="kwd">esac</span><span class="pln">
+</span><span class="kwd">done</span></code></pre>
+</div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/15304671" title="short permalink to this answer" class="short-link" id="link-post-15304671">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/15304671/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    
+
+    <div class="user-info user-hover">
+        <div class="user-action-time">
+                                    answered
+ <span title="2013-03-08 22:51:24Z" class="relativetime">2 days ago</span>
+        </div>
+        <div class="user-gravatar32">
+            <a href="http://stackoverflow.com/users/1301972/codegnome"><div class=""><img src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/2c757e0f93dc6f4adbb6f0be41c7d7bd.png" alt="" height="32" width="32"></div></a>
+        </div>
+        <div class="user-details">
+            <a href="http://stackoverflow.com/users/1301972/codegnome">CodeGnome</a><br>
+            <span class="reputation-score" title="reputation score 11512" dir="ltr">11.5k</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="9 silver badges"><span class="badge2"></span><span class="badgecount">9</span></span><span title="35 bronze badges"><span class="badge3"></span><span class="badgecount">35</span></span>
+        </div>
+    </div>
+
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+    <div id="comments-15304671" class="comments">
+        <table>
+        <tbody>
+                    
+    <tr id="comment-21602932" class="comment">
+        <td></td>
+        <td class="comment-text"><div><span class="comment-copy">I like the idea of using the file utility! Makes the loop a little more concise. @zzk had the same idea.</span> –&nbsp;<a href="http://stackoverflow.com/users/2062164/tannermares" title="51 reputation" class="comment-user owner">tannermares</a> <span class="comment-date" dir="ltr"><a class="comment-link" onclick="StackExchange.question.highlightComment(21602932, 15304671)" href="#comment21602932_15304671"><span title="2013-03-08 23:30:46Z" class="relativetime-clean">2 days ago</span></a></span></div></td>
+    </tr>
+
+        </tbody>
+    
+        </table>
+    </div>
+    
+</td>
+</tr>
+   
+    
+    </tbody></table>
+</div>
+    <a name="new-answer"></a>
+    <form id="post-form" action="/questions/15304435/answer/submit" method="post" class="post-form">
+        <input id="post-id" value="15304435" type="hidden">
+        <h2 class="space">Your Answer</h2>
+
+
+
+    
+<script type="text/javascript">
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+         
+        prepareEditor({
+            heartbeatType: 'answer',
+            bindNavPrevention: true,
+            postfix: "",
+            onDemand: true,
+            discardSelector: ".discard-answer"
+            ,immediatelyShowMarkdownHelp:true
+        });
+        
+
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li style="left: 0px;" class="wmd-button" id="wmd-bold-button"><span style="background-position: 0px -20px;"></span></li><li style="left: 25px;" class="wmd-button" id="wmd-italic-button"><span style="background-position: -20px -20px;"></span></li><li style="left: 50px;" class="wmd-spacer" id="wmd-spacer1"><span style="background-position: -40px -20px;"></span></li><li style="left: 75px;" class="wmd-button" id="wmd-link-button"><span style="background-position: -40px -20px;"></span></li><li style="left: 100px;" class="wmd-button" id="wmd-quote-button"><span style="background-position: -60px -20px;"></span></li><li style="left: 125px;" class="wmd-button" id="wmd-code-button"><span style="background-position: -80px -20px;"></span></li><li style="left: 150px;" class="wmd-button" id="wmd-image-button"><span style="background-position: -100px -20px;"></span></li><li style="left: 175px;" class="wmd-spacer" id="wmd-spacer2"><span style="background-position: -120px -20px;"></span></li><li style="left: 200px;" class="wmd-button" id="wmd-olist-button"><span style="background-position: -120px -20px;"></span></li><li style="left: 225px;" class="wmd-button" id="wmd-ulist-button"><span style="background-position: -140px -20px;"></span></li><li style="left: 250px;" class="wmd-button" id="wmd-heading-button"><span style="background-position: -160px -20px;"></span></li><li style="left: 275px;" class="wmd-button" id="wmd-hr-button"><span style="background-position: -180px -20px;"></span></li><li style="left: 300px;" class="wmd-spacer" id="wmd-spacer3"><span style="background-position: -200px -20px;"></span></li><li style="left: 325px;" class="wmd-button" id="wmd-undo-button"><span style="background-position: -200px -20px;"></span></li><li style="left: 350px;" class="wmd-button" id="wmd-redo-button"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" value="f7649f81c5085986f85551a6b4e1ac44" type="hidden">
+        <input id="author" name="author" type="text">
+    </div>
+</div>
+        <div style="position: relative;"> 
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                <td class="vm open-id-login">
+                    <a id="login-link" style="font-size: 200%; margin-left: 30px;" href="http://stackoverflow.com/users/login?returnurl=%2fquestions%2f15304435%2fwhat-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ">log in</a>
+                    <script type="text/javascript">
+                        StackExchange.ready(function () {
+                            StackExchange.helpers.onClickDraftSave('#login-link');
+                        });
+                    </script>
+                </td>
+                    <script type="text/javascript">
+                StackExchange.ready(function () {
+                    StackExchange.helpers.bindHelpOverlayEvents($('.vm input'));
+                });
+            </script>
+                <td class="orcell">
+                    <div class="orword">or</div>
+                    <div class="orline"></div>
+                </td>
+            <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input disabled="disabled" class="actual-edit-overlay" style="opacity: 1; position: absolute; background-color: white; color: black; width: 220px; height: 17px; line-height: 17px; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 12.8px; text-align: start; border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); border-style: solid; border-color: rgb(153, 153, 153); border-width: 1px;" size="30" maxlength="30" tabindex="105" type="text"><input class="edit-field-overlayed" style="opacity: 0.4; z-index: 1; position: relative;" id="display-name" name="display-name" size="30" maxlength="30" tabindex="105" type="text">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input disabled="disabled" class="actual-edit-overlay" style="opacity: 1; position: absolute; background-color: white; color: black; width: 290px; height: 17px; line-height: 17px; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 12.8px; text-align: start; border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); border-style: solid; border-color: rgb(153, 153, 153); border-width: 1px;" size="40" maxlength="100" value="required, but never shown" tabindex="106" type="text"><input class="edit-field-overlayed" style="opacity: 0.4; z-index: 1; position: relative;" id="m-address" name="m-address" size="40" maxlength="100" tabindex="106" type="text">
+                    <span class="edit-field-overlay">required, but never shown</span>
+                </div>
+                    <div>
+                        <label for="home-page">Home Page</label>
+                        <input disabled="disabled" class="actual-edit-overlay" style="opacity: 1; position: absolute; background-color: white; color: black; width: 290px; height: 17px; line-height: 17px; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 12.8px; text-align: start; border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); border-style: solid; border-color: rgb(153, 153, 153); border-width: 1px;" size="40" maxlength="200" tabindex="107" type="text"><input class="edit-field-overlayed" style="opacity: 0.4; z-index: 1; position: relative;" id="home-page" name="home-page" size="40" maxlength="200" tabindex="107" type="text">
+                    </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+        </div>
+           
+            <div class="form-submit cbt">
+            <input id="submit-button" value="Post Your Answer" tabindex="110" type="submit">
+            <a href="#" class="discard-answer dno">discard</a>
+    <p class="privacy-policy-agreement">
+        By posting your answer, you agree to the 
+        <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and 
+        <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.
+    </p>
+    <input name="legalLinksShown" value="1" type="hidden">
+        </div>
+    </form>
+
+
+
+        <h2 class="bottom-notice">
+                Not the answer you're looking for? 
+            Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/bash" class="post-tag" title="show questions tagged 'bash'" rel="tag">bash</a> <a href="http://stackoverflow.com/questions/tagged/script" class="post-tag" title="show questions tagged 'script'" rel="tag">script</a> <a href="http://stackoverflow.com/questions/tagged/cat" class="post-tag" title="show questions tagged 'cat'" rel="tag">cat</a> <a href="http://stackoverflow.com/questions/tagged/built-in" class="post-tag" title="show questions tagged 'built-in'" rel="tag">built-in</a> 
+                or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.
+        </h2>
+</div>
+</div>
+<div id="sidebar">
+
+
+
+     <script type="text/javascript">
+        window.showNewUser = true;
+
+            
+                (function(){
+                    var cs = window.sessionStorage && window.sessionStorage['tNewsletter'];
+                    var m = /:\/\/([^\/]*)/.exec(document.referrer);
+                    var h = {'www.reddit.com':1,'news.ycombinator.com':1};
+                    if(window.sessionStorage && (cs || (m && m.length == 2 && h[m[1]]))){
+                        showNewUser = false;
+                        StackExchange.ready(function(){
+                            StackExchange.newsletterAd.loader(m[1], cs);
+                        });
+                    }
+                    if (window.localStorage && showNewUser){
+                        var c = parseInt(localStorage['nuCounter'],10); 
+                        c = isNaN(c) ? 1 : c+1;
+                        window.localStorage['nuCounter'] = c; 
+                        showNewUser = c < 10;
+                    }
+                })()
+            
+     </script>
+    <div class="module newuser newuser-greeting" id="newuser-box" style="">
+        <h4>Hello World!</h4>
+        <div>
+            <p>This is a collaboratively edited question and answer site for <b>professional and enthusiast programmers</b>. It's 100% free, no registration required.</p>
+            <p class="ar">
+                    <a href="http://stackoverflow.com/about?mnu=1">about »</a>&nbsp;&nbsp;&nbsp;
+                <a href="http://stackoverflow.com/faq?mnu=1">faq »</a>
+            </p>
+        </div>
+    </div>
+     <script type="text/javascript">
+        if (showNewUser) {
+            document.getElementById('newuser-box').style.display = '';
+        }
+     </script>
+        <div class="module question-stats">
+        <p class="label-key">tagged</p>
+        <div class="tagged"><a href="http://stackoverflow.com/questions/tagged/bash" class="post-tag" title="show questions tagged 'bash'" rel="tag">bash</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">19776</span></span><br>
+<a href="http://stackoverflow.com/questions/tagged/script" class="post-tag" title="show questions tagged 'script'" rel="tag">script</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">6802</span></span><br>
+<a href="http://stackoverflow.com/questions/tagged/cat" class="post-tag" title="show questions tagged 'cat'" rel="tag">cat</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">211</span></span><br>
+<a href="http://stackoverflow.com/questions/tagged/built-in" class="post-tag" title="" rel="tag">built-in</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">156</span></span><br>
+</div>
+        <table id="qinfo">
+            <tbody><tr>
+                <td><p class="label-key">asked</p></td>
+                <td style="padding-left:10px"><p class="label-key" title="2013-03-08 22:30:01Z"><b>2 days ago</b></p></td>
+            </tr>
+            <tr>
+                <td><p class="label-key">viewed</p></td>
+
+                <td style="padding-left:10px">
+                    <p class="label-key">
+                        <b>24 times</b>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td><p class="label-key">active</p></td>
+                <td style="padding-left:10px"><p class="label-key"><b><a href="http://stackoverflow.com/questions/15304435/what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ?lastactivity" class="lastactivity-link" title="2013-03-08 22:55:04Z">2 days ago</a></b></p></td>
+            </tr>
+        </tbody></table>
+    </div>
+    
+<div class="module community-bulletin" data-tracker="cb=1">
+    <h4>Community Bulletin</h4>
+    <div class="related">
+        <div class="spacer bulletin-item-important">
+            <div class="bulletin-item-type event-date">event</div>
+            <div class="bulletin-item-content">
+                <a href="http://stackoverflow.com/election?cb=1" class="question-hyperlink" target="_blank">2013 Community Moderator Election</a> <span class="event-date" style="white-space: nowrap;">– ends <span title="2013-03-12 20:00:00Z" class="relativetime">tomorrow</span></span>
+            </div>
+            <br class="cbt">
+        </div>
+
+        <div class="spacer">
+            <div class="bulletin-item-type"><a href="http://blog.stackoverflow.com/?cb=1" class="event-date" target="_blank">blog</a></div>
+            <div class="bulletin-item-content">
+                <a href="http://blog.stackoverflow.com/2013/03/2013-so-moderator-election/?cb=1" class="question-hyperlink" target="_blank">VOTE NOW in the 2013 Stack Overflow Moderator Election</a>
+            </div>
+            <br class="cbt">
+        </div>
+    </div>
+</div>    
+                <script type="text/javascript">
+                var scriptSrc = "http://engine.adzerk.net/z/8277/adzerk1_2_4_43,adzerk2_2_17_45,adzerk3_2_4_44?keywords=bash,script,cat,built-in";
+                if (document.referrer) {
+                    if (/\?/.test(scriptSrc))
+                        scriptSrc += "&";
+                    else
+                        scriptSrc += "?";
+                    scriptSrc += "xReferrer=" + document.referrer;
+                }
+                StackExchange.ready(function () {
+                    var z = document.createElement("script");
+                    z.type = "text/javascript";
+                    z.async = "true";
+                    z.src = scriptSrc;
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(z, s);
+                });
+            </script>
+        <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk2"><a href="http://engine.adzerk.net/r?e=eyJ0cyI6MTM2MzAxMDUzNzc4NCwiYXYiOjQxNCwiYXQiOjE3LCJjbSI6ODQ3LCJjaCI6MTE3OCwiY3IiOjU2MzY1LCJkbSI6MSwiZmMiOjgwNTQzLCJmbCI6MjQ0NCwia3ciOiJiYXNoLHNjcmlwdCxjYXQsYnVpbHQtaW4iLCJudyI6MjIsInJ2IjowLCJwciI6MTU2OCwic3QiOjgyNzcsInpuIjo0NSwiZGkiOiI5ZjYwZGM2YThhNjI0MmU4YjVjMjEwNmFiMThiOTZiZCIsInVyIjoiaHR0cDovL3N0YWNrZXhjaGFuZ2UuY29tL2Fib3V0L2hpcmluZyJ9&amp;s=eZC9UD5VkOv5m0z4w9MkNz6FvsE" rel="nofollow" target="_blank" title=""><img src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/83548ab0d32849899a38e743d918ed91.png" title="" alt="" height="250" border="0" width="220"></a><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input value="12" name="downvoteReason" type="radio">Uninteresting</label></li><li><label><input value="13" name="downvoteReason" type="radio">Misleading</label></li><li><label><input value="14" name="downvoteReason" type="radio">Offensive</label></li><li><label><input value="15" name="downvoteReason" type="radio">Repetitive</label></li></ul><a href="#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/i.gif" height="0px" width="0px"></div>
+    <div id="hireme"> <a href="http://careers.stackoverflow.com/jobs?a=12" class="top" target="_blank"></a> <ul class="jobs"> <li> <a href="http://careers.stackoverflow.com/jobs/30490/senior-front-end-developer-whodini?a=A1sJMKA" target="_blank" title="Senior Front-end Developer at Whodini. Click to learn more."> Senior Front-end Developer<br> <span class="company">Whodini</span> <span class="location">Los Altos, CA / relocation</span> </a> </li> <li> <a href="http://careers.stackoverflow.com/jobs/31056/web-application-javascript-developer-chemaxon?a=AGVjaGQ" target="_blank" title="Web application (Javascript) developer at ChemAxon. Click to learn more."> Web application (Javascript) developer<br> <span class="company">ChemAxon</span> <span class="location">Budapest, Hungary</span> </a> </li> <li> <a href="http://careers.stackoverflow.com/jobs/31571/siri-software-engineer-data-26098695-apple?a=BiEfSus" target="_blank" title="Siri Software Engineer, Data -26098695 at Apple. Click to learn more."> Siri Software Engineer, Data -26098695<br> <span class="company">Apple</span> <span class="location">Cupertino, CA</span> </a> </li> </ul> <img alt="" class="impression" src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/A1sJMKA-AGVjaGQ-BiEfSus-12.gif" style="display:none"></div>
+
+
+
+        <div style="margin-bottom: 10px;">
+        
+
+<style type="text/css">
+#newsletter-ad {
+    width: 190px;
+    height: 250px;
+    overflow: hidden;
+    background: url('http://cdn.sstatic.net/stackoverflow/img/newsletter-ad.png');
+    padding: 0 15px 0 15px;
+}
+#newsletter-ad-header {
+    margin-top: 60px;
+}
+#newsletter-ad ul {
+    margin: 1em 0 1em 1.5em;
+}
+#newsletter-ad ul li {
+    margin-bottom: 5px;
+}
+#newsletter-signup-container {
+    text-align: center;
+}
+#newsletter-preview-container {
+    margin-top: 10px;
+    text-align: center;
+}
+#newsletter-email-input {
+    width: 200px;
+}
+</style>
+
+<script>
+    StackExchange.ready(function () {
+        StackExchange.newsletterAd.init();
+    });
+</script>
+
+<div id="newsletter-ad">
+    <p id="newsletter-ad-header">Get the <strong>weekly newsletter!</strong></p>
+    <ul>
+        <li>Top questions and answers</li>
+        <li>Important announcements</li>
+        <li>Unanswered questions</li>
+    </ul>
+    <div id="newsletter-signup-container"><input id="newsletter-signup" value="Sign up for the newsletter" type="button"></div>
+    <p id="newsletter-preview-container">see an <a href="http://stackexchange.com/newsletters/newsletter?site=stackoverflow.com" id="newsletter-preview">example newsletter</a></p>
+    <div class="dno">
+            <p class="privacy-policy-agreement">
+        By subscribing, you agree to the 
+        <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and 
+        <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.
+    </p>
+    <input name="legalLinksShown" value="1" type="hidden">
+
+    </div>
+</div>
+
+    </div>
+  
+    
+    <div class="module sidebar-related">
+        <h4 id="h-related">Related</h4>
+        <div class="related" data-tracker="rq=1">
+            <div class="spacer">
+<a href="http://stackoverflow.com/questions/2337360/what-is-the-most-compact-or-efficient-way-of-doing-several-subsitutions-in-a-fil?rq=1" class="question-hyperlink">What is the most compact or efficient way of doing several subsitutions in a file in bash</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/5125967/a-better-way-to-write-this-bash-script?rq=1" class="question-hyperlink">A Better Way To Write this Bash Script?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/5233702/using-while-do-grep?rq=1" class="question-hyperlink">using WHILE DO GREP</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/5355834/what-is-difference-between-running-the-script-as-script-sh-and-script-sh?rq=1" class="question-hyperlink">What is difference between running the script as ./script.sh and . ./script.sh</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/8419211/bash-script-testing-age-and-compressing-files?rq=1" class="question-hyperlink">BASH Script - Testing age and compressing files</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/8599070/bash-and-script-help-generating-files-with-variable-content?rq=1" class="question-hyperlink">Bash and Script help generating files with variable content</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/8682821/bash-script-mystery-what-exactly-did-i-do-here?rq=1" class="question-hyperlink">Bash script mystery, what exactly did I do here?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/9035075/bash-script-copy-many-files-same-name-contained-in-different-father-folder?rq=1" class="question-hyperlink">BASH SCRIPT: copy many files (same name) contained in different father folder</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/9538206/bash-script-for-creating-text-in-a-file-using-arguments?rq=1" class="question-hyperlink">Bash script for creating text in a file using arguments</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/10425709/bash-script-comparing-curl-results-with-file?rq=1" class="question-hyperlink">Bash script comparing curl results with file</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/10624557/for-each-file-walk-line-by-line-and-grep-for-string-incorrect-output?rq=1" class="question-hyperlink">For each file: Walk line by line and grep for string (incorrect output)</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/10677594/print-only-lines-different-from-several-strings-of-a-bash-script?rq=1" class="question-hyperlink">Print only lines different from several strings of a bash script</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/11032133/look-into-file-names-and-concatenate-them-in-bash?rq=1" class="question-hyperlink">look into file names and concatenate them in bash</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/12337115/bash-script-to-copy-specific-set-of-files?rq=1" class="question-hyperlink">bash script to copy specific set of files</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/12466786/marking-end-of-file-while-redirecting-to-a-file-in-a-non-interactive-bash-script?rq=1" class="question-hyperlink">marking end of file while redirecting to a file in a non-interactive bash script using cat</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/12636170/bash-script-error-with-cat-and-if?rq=1" class="question-hyperlink">Bash script error with cat and if</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/13395222/bash-script-save-stream-from-serial-port-dev-ttyusb0-to-file-until-a-specifi?rq=1" class="question-hyperlink">Bash script: save stream from Serial Port (/dev/ttyUSB0) to file until a specific input (e.g. eof) appears</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/14016676/ways-to-speed-up-my-bash-script?rq=1" class="question-hyperlink">Ways to speed up my bash script?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/14738187/get-bash-script-to-check-directory-for-files-and-perform-action-based-on-each-fi?rq=1" class="question-hyperlink">Get Bash script to check directory for files and perform action based on each file</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/15042425/running-two-c-file-in-bash-script?rq=1" class="question-hyperlink">Running Two C++ file in Bash script</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/15077483/simple-bash-script-file-copy?rq=1" class="question-hyperlink">Simple Bash Script File Copy</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/15098148/bash-script-putting-input-without-input-redirection-for-a-c-file?rq=1" class="question-hyperlink">Bash script putting input without input redirection for a c++ file</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/15110518/adding-a-status-file-integritycheck-to-a-cbr-cbz-converting-bash-script?rq=1" class="question-hyperlink">Adding a status (file integrity)check to a cbr cbz converting bash script</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/15235295/design-bash-script-for-extract-unknown-file-name-section?rq=1" class="question-hyperlink">Design bash script for extract unknown file name section</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/questions/15278578/bash-script-test-for-video-files-failed?rq=1" class="question-hyperlink">bash script : test for video files failed</a>
+</div>
+
+        </div>
+    </div>
+        <div class="everyonelovesstackoverflow" id="adzerk3">
+        </div>
+
+
+</div>
+
+<div id="feed-link">
+    <div id="feed-link-text"><a href="http://stackoverflow.com/feeds/question/15304435" title="feed of this question and its answers"><span class="feed-icon"></span>question feed</a></div>
+</div>
+<script type="text/javascript">
+StackExchange.ready(function(){$.get('/posts/15304435/ivc/fde9');});
+</script>
+<noscript>
+    <div><img src="/posts/15304435/ivc/fde9" class="dno" alt="" width="0" height="0"></div>
+</noscript><div style="display:none" id="prettify-lang">lang-bsh</div></div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                    <a href="http://stackoverflow.com/about">about</a> |
+                <a href="http://stackoverflow.com/faq">faq</a> |
+                <a href="http://blog.stackexchange.com/?blb=1">blog</a> |
+                    <a href="http://chat.stackoverflow.com/">chat</a> |
+                <a href="http://data.stackexchange.com/">data</a> |
+                <a href="http://stackexchange.com/legal">legal</a> |
+                <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a> |
+                <a href="http://stackexchange.com/about/hiring">jobs</a> |
+                <a href="http://engine.adzerk.net/redirect/0/2776/2751/0/4de3c60f719c4dfcb1a57531c7050090/0">advertising info</a> |
+
+                <a onclick='StackExchange.switchMobile("on", "/questions/15304435/what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ")'>mobile</a> |
+
+                <b><a href="http://stackoverflow.com/help">contact us</a></b>
+                  | <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                <div id="footer-sites">
+                    
+                        <span style="color:#FE7A15;font-size:140%">■</span>&nbsp;<a href="http://stackoverflow.com/">stackoverflow.com</a>&nbsp; 
+                        <span style="color:#FE7A15;font-size:140%">■</span>&nbsp;<a href="http://stackapps.com/">api/apps</a>&nbsp; 
+                        <span style="color:#FE7A15;font-size:140%">■</span>&nbsp;<a href="http://careers.stackoverflow.com/">careers 2.0</a>&nbsp; 
+                        <span style="color:#E8272C;font-size:140%">■</span>&nbsp;<a href="http://serverfault.com/">serverfault.com</a>&nbsp; 
+                        <span style="color:#00AFEF;font-size:140%">■</span>&nbsp;<a href="http://superuser.com/">superuser.com</a>&nbsp; 
+                        <span style="color:#969696;font-size:140%">■</span>&nbsp;<a href="http://meta.stackoverflow.com/">meta</a>&nbsp; 
+                        <span style="color:#46937D;font-size:140%">■</span>&nbsp;<a href="http://area51.stackexchange.com/">area&nbsp;51</a>&nbsp; 
+                        <span style="color:#C0D0DC;font-size:140%">■</span>&nbsp;<a href="http://webapps.stackexchange.com/">webapps</a>&nbsp; 
+                        <span style="color:#000000;font-size:140%">■</span>&nbsp;<a href="http://gaming.stackexchange.com/">gaming</a>&nbsp; 
+                        <span style="color:#dd4814;font-size:140%">■</span>&nbsp;<a href="http://askubuntu.com/">ubuntu</a>&nbsp; 
+                        <span style="color:#9ce4fe;font-size:140%">■</span>&nbsp;<a href="http://webmasters.stackexchange.com/">webmasters</a>&nbsp; 
+                        <span style="color:#cf4d3f;font-size:140%">■</span>&nbsp;<a href="http://cooking.stackexchange.com/">cooking</a>&nbsp; 
+                        <span style="color:#f4f28d;font-size:140%">■</span>&nbsp;<a href="http://gamedev.stackexchange.com/">game development</a>&nbsp; 
+                        <span style="color:#0f3559;font-size:140%">■</span>&nbsp;<a href="http://math.stackexchange.com/">math</a>&nbsp; 
+                        <span style="color:#f2f2f2;font-size:140%">■</span>&nbsp;<a href="http://photo.stackexchange.com/">photography</a>&nbsp; 
+                        <span style="color:#037187;font-size:140%">■</span>&nbsp;<a href="http://stats.stackexchange.com/">stats</a>&nbsp; 
+                        <span style="color:#f1e7cc;font-size:140%">■</span>&nbsp;<a href="http://tex.stackexchange.com/">tex</a>&nbsp; 
+                        <span style="color:#e1cdae;font-size:140%">■</span>&nbsp;<a href="http://english.stackexchange.com/">english</a>&nbsp; 
+                        <span style="color:#a2d9f6;font-size:140%">■</span>&nbsp;<a href="http://cstheory.stackexchange.com/">theoretical cs</a>&nbsp; 
+                        <span style="color:#1b3e6c;font-size:140%">■</span>&nbsp;<a href="http://programmers.stackexchange.com/">programmers</a>&nbsp; 
+                        <span style="color:#293a5d;font-size:140%">■</span>&nbsp;<a href="http://unix.stackexchange.com/">unix</a>&nbsp;
+                        <span style="color:#bec0cb;font-size:140%">■</span>&nbsp;<a href="http://apple.stackexchange.com/">apple</a>&nbsp;
+                        <span style="color:#939185;font-size:140%">■</span>&nbsp;<a href="http://wordpress.stackexchange.com/">wordpress</a>&nbsp;
+                        <span style="color:#ebf5f5;font-size:140%">■</span>&nbsp;<a href="http://physics.stackexchange.com/">physics</a>&nbsp;
+                        <span style="color:#4176ab;font-size:140%">■</span>&nbsp;<a href="http://diy.stackexchange.com/">home&nbsp;improvement</a>&nbsp;
+                        <span style="color:#d1d8d7;font-size:140%">■</span>&nbsp;<a href="http://gis.stackexchange.com/">gis</a>&nbsp;
+                        <span style="color:#e5e2d3;font-size:140%">■</span>&nbsp;<a href="http://electronics.stackexchange.com/">electrical&nbsp;engineering</a>&nbsp;
+                        <span style="color:#a4c639;font-size:140%">■</span>&nbsp;<a href="http://android.stackexchange.com/">android</a>&nbsp;
+                        <span style="color:#2e4e60;font-size:140%">■</span>&nbsp;<a href="http://security.stackexchange.com/">security</a>&nbsp;
+                        <span style="color:#45bcb5;font-size:140%">■</span>&nbsp;<a href="http://bicycles.stackexchange.com/">bicycles</a>&nbsp;
+                        <span style="color:#00adee;font-size:140%">■</span>&nbsp;<a href="http://dba.stackexchange.com/">dba</a>&nbsp;
+                        <span style="color:#2edaf0;font-size:140%">■</span>&nbsp;<a href="http://drupal.stackexchange.com/">drupal</a>&nbsp;
+                        <span style="color:#213951;font-size:140%">■</span>&nbsp;<a href="http://sharepoint.stackexchange.com/">sharepoint</a>&nbsp;
+                        <span style="color:#73abb3;font-size:140%">■</span>&nbsp;<a href="http://scifi.stackexchange.com/">scifi&nbsp;&amp;&nbsp;fantasy</a>&nbsp;
+                        <span style="color:#23629F;font-size:140%">■</span>&nbsp;<a href="http://ux.stackexchange.com/">user&nbsp;experience</a>&nbsp;
+                        <span style="color:#faff72;font-size:140%">■</span>&nbsp;<a href="http://skeptics.stackexchange.com/">skeptics</a>&nbsp;
+                        <span style="color:#623121;font-size:140%">■</span>&nbsp;<a href="http://rpg.stackexchange.com/">rpg</a>&nbsp;
+                        <span style="color:#e4be88;font-size:140%">■</span>&nbsp;<a href="http://judaism.stackexchange.com/">judaism</a>&nbsp;
+                        <span style="color:#ffecb1;font-size:140%">■</span>&nbsp;<a href="http://mathematica.stackexchange.com/">mathematica</a>&nbsp;
+                        <span style="color:#1b8598;font-size:140%">■</span>&nbsp;<a href="http://travel.stackexchange.com/">travel</a>&nbsp;
+                </div>
+            </div>
+            <div id="footer-flair">
+                <a class="peer1" href="http://www.peer1.com/stackoverflow"></a>  
+	            <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+                <div id="svnrev">rev 2013.3.9.548</div>
+                        </div>
+            <div id="copyright">
+                site design / logo © 2013 stack exchange inc; 
+                user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            
+
+        </div>
+    <iframe id="global-auth-frame" style="display:none" src="what-is-the-most-efficient-way-to-concatenate-files-of-different-compression-typ_archivos/read.html"></iframe></div>
+    
+    <noscript>
+        <div id="noscript-warning">Stack Overflow works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
+    </noscript>
+    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-1']);
+        _gaq.push(['_setCustomVar', 1, 'tags', '|bash|script|cat|built-in|']); 
+_gaq.push(['_trackPageview']);
+    var _qevents = _qevents || [];
+    (function(){
+        var s=document.getElementsByTagName('script')[0];
+        var ga=document.createElement('script');
+        ga.type='text/javascript';
+        ga.async=true;
+        ga.src='http://www.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(ga,s);
+        var sc=document.createElement('script');
+        sc.type='text/javascript';
+        sc.async=true;
+        sc.src='http://edge.quantserve.com/quant.js'; 
+        s.parentNode.insertBefore(sc,s);
+    })();
+    </script>
+    <script type="text/javascript">
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>        
+    
+
+</body></html>
